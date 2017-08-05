@@ -19,9 +19,11 @@ Route::get('discord', function () {
     return redirect()->to(config('discord.server'));
 })->name('discord-invite');
 
-Route::get('login', 'UserController@login');
+Route::get('login', 'UserController@login')->name('login');
 Route::get('logout', 'UserController@logout');
 
-Route::get('dashboard', function () {
-    return 'There are nothing here right now.';
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'discord']], function () {
+    Route::get('/', function () {
+        return 'There is nothing here yet, click <a href="/logout">here to logout.</a>';
+    });
 });
