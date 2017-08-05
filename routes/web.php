@@ -18,3 +18,10 @@ Route::get('/', function () {
 Route::get('discord', function () {
     return redirect()->to(config('discord.server'));
 })->name('discord-invite');
+
+Route::get('login', 'UserController@login');
+Route::get('logout', 'UserController@logout');
+
+Route::get('dashboard', function () {
+    return 'There are nothing here right now.';
+});
