@@ -20,7 +20,7 @@
                         <div class="col-sm-8 col-md-7">
                             <h1> Hack a life</h1>
                             <p class="lead">The hacker mindset doesn't actually see what happens on the other side, to the victim.<br></p>
-                            <a class="btn type--uppercase" href="#"> <span class="btn__text"><span>LOG IN</span><br></span>
+                            <a class="btn type--uppercase" href="{{ route('dashboard') }}"> <span class="btn__text"><span>LOG IN</span><br></span>
                             </a>
                             <a class="btn btn--primary type--uppercase" href="{{ route('discord-invite') }}"> <span class="btn__text"><span>DISCORD</span><br></span>
                             </a>

@@ -25,5 +25,5 @@ Route::get('logout', 'UserController@logout');
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'discord']], function () {
     Route::get('/', function () {
         return 'There is nothing here yet, click <a href="/logout">here to logout.</a>';
-    });
+    })->name('dashboard');
 });
