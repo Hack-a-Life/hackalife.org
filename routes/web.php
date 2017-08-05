@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('discord', function () {
+    return redirect()->to(config('discord.server'));
+})->name('discord-invite');
